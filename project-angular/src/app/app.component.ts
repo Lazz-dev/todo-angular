@@ -11,10 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   newTask: string = '';
-  tarefas: { name: string, completed: boolean }[] = [
-    
-   
-  ];
+  tarefas: { name: string, completed: boolean }[] = [];
 
   addTask() {
     if (this.newTask.trim()) {

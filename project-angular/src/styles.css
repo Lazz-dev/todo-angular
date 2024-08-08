@@ -1,8 +1,42 @@
-.completed {
-  
-  text-decoration: line-through;
-  color: gray;
-  
+.todo-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 
+.completed {
+  background-color: #e9ecef;
+}
+
+.completed span {
+  text-decoration: line-through;
+  color: gray;
+}
+
+
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+
+.delete-button {
+  border: none;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+  color: white;
+}
+
+
+.list-group-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
