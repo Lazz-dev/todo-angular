@@ -1,0 +1,21 @@
+<h1 class="text-center my-4">To-do</h1>
+<div class="todo-container mx-auto">
+  <div class="input-container d-flex justify-content-center mb-4">
+      <input [(ngModel)]="newTask" type="text" class="form-control mr-2" placeholder="Adicione uma nova tarefa" (keyup.enter)="addTask()">
+      <button class="btn btn-primary" (click)="addTask()">Adicionar</button>
+  </div>
+  <ul class="list-group">
+      <li *ngFor="let tarefa of tarefas" class="list-group-item d-flex align-items-center justify-content-between" [ngClass]="{'completed-task': tarefa.completed}">
+          <div class="d-flex align-items-center">
+              <button class="toggle-task" (click)="toggleComplete(tarefa)">
+                <div class="check" [ngClass]="{'completed-task-icon': tarefa.completed}">
+                    <span *ngIf="tarefa.completed"><fa-icon [icon]="faCheckCircle"></fa-icon></span>
+                    <span *ngIf="!tarefa.completed"><fa-icon [icon]="faCheckCircle"></fa-icon></span>
+                </div>
+              </button>
+              <span>{{ tarefa.name }}</span>
+          </div>
+          <button class="trash" (click)="deleteTask(tarefa)"><fa-icon [icon]="faTrash"></fa-icon></button> 
+        </li>
+  </ul>
+</div>

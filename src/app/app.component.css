@@ -1,0 +1,36 @@
+
+.toggle-task {
+    background: none;
+    border: none;
+    outline: none;
+    box-shadow: none; 
+}
+
+.trash {
+    background: none;
+    border: none;
+    color: darkgrey;
+}
+
+.check {
+    color: darkgrey;
+}
+
+.check:hover {
+    color: green;
+    transition: 0.8s;
+}
+
+.trash:hover {
+    color: black;
+    transition: 0.8s;
+}
+
+.completed-task {
+  text-decoration: line-through;
+  background: rgb(248, 243, 243);
+}
+
+.completed-task-icon {
+    color: green;
+}
